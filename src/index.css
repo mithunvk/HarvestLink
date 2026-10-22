@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Color Palette */
+  --color-forest-50: #f0f7f0;
+  --color-forest-100: #d9edda;
+  --color-forest-200: #b3dab4;
+  --color-forest-300: #80c282;
+  --color-forest-400: #4da550;
+  --color-forest-500: #2e7d32;
+  --color-forest-600: #1b5e20;
+  --color-forest-700: #124116;
+  --color-forest-800: #0a2a0b;
+  --color-forest-900: #051505;
+
+  --color-leaf-50: #f1f8e9;
+  --color-leaf-100: #dcedc8;
+  --color-leaf-200: #c5e1a5;
+  --color-leaf-300: #aed581;
+  --color-leaf-400: #9ccc65;
+  --color-leaf-500: #8bc34a;
+  --color-leaf-600: #7cb342;
+  --color-leaf-700: #689f38;
+  --color-leaf-800: #558b2f;
+  --color-leaf-900: #33691e;
+
+  --color-earth-50: #fdf8f3;
+  --color-earth-100: #f5e6d3;
+  --color-earth-200: #e8c99a;
+  --color-earth-300: #d4a265;
+  --color-earth-400: #c07b3a;
+  --color-earth-500: #a0552a;
+  --color-earth-600: #7d3b1d;
+  --color-earth-700: #5a2812;
+  --color-earth-800: #38180a;
+  --color-earth-900: #1a0a04;
+
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-300: #fcd34d;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+
+  --color-cream: #faf7f2;
+  --color-warm-white: #f9f6f1;
+
+  /* Fonts */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Border radius */
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --radius-badge: 6px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: #1a2e1a;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-forest-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-forest-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-500);
+}
+
+/* Card base styles */
+.card {
+  background: white;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-forest-100);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-button);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Status badge animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.badge-active {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Page transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Mobile-first responsive helpers */
+@media (max-width: 640px) {
+  .mobile-full {
+    width: 100% !important;
+  }
+}
+
+/* Demo mode banner */
+.demo-banner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-bottom: 2px solid #f59e0b;
+  color: #78350f;
+}
