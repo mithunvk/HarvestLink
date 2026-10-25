@@ -1,9 +1,9 @@
-# HARVESTLINK 🌾
+# HARVESTLINK 
 > Direct Market Access & Collective Order Assembly Platform for Marginal Farmers in Dakshina Kannada & Udupi, Karnataka, India.
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **HARVESTLINK** is a full-stack agricultural marketplace platform built specifically to solve the structural challenges faced by marginal and smallholder farmers in coastal Karnataka (Dakshina Kannada and Udupi districts).
 
@@ -15,9 +15,9 @@ Traditional agricultural supply chains force smallholder farmers to sell through
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
-### 👨‍🌾 For Farmers
+### For Farmers
 - **Listings Management**: Post produce with grade, asking price, minimum order quantity, and harvest availability windows.
 - **Demand Radar**: Real-time matching against active buyer requirements with compatibility scoring and explanations.
 - **Consent-First Collective Orders**: Receive order proposals where you review and independently approve or reject your specific volume contribution.
@@ -29,14 +29,14 @@ Traditional agricultural supply chains force smallholder farmers to sell through
 - **Collective Supply Plan Generator**: Automatically calculate feasible multi-farmer supply plans with line-item breakdowns and logistics cost estimates.
 - **Transparent Order Tracking**: Track multi-farmer acceptance status, packing, dispatch, transit, and delivery.
 
-### 🛡️ For Administrators
+### For Administrators
 - **Market Intelligence Control**: Update daily APMC modal and benchmark prices.
 - **Platform Analytics**: Monitor active listings, collective orders, fulfillment rates, and gross merchandise volume.
 - **Audit Logs & Dispute Resolution**: Full traceability on every order transition and proposal revision.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend & App Framework**: React 19, TypeScript, Vite
 - **Styling**: Tailwind CSS v4 with custom agricultural design system (forest green, earth amber, warm cream)
@@ -48,7 +48,7 @@ Traditional agricultural supply chains force smallholder farmers to sell through
 
 ---
 
-## 🏃 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher recommended)
@@ -94,7 +94,7 @@ npm run build
 
 ---
 
-## 👥 Demo Personas & Test Accounts
+## Demo Personas & Test Accounts
 
 You can test any role directly from the **Sign In** page with quick one-click demo credentials:
 
