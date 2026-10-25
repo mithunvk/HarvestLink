@@ -149,5 +149,5 @@ Harvest_Link/
 
 ---
 
-## 📜 License
+## License
 MIT License. Built for agricultural development and equitable farmer market access in Karnataka.
