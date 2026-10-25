@@ -5,7 +5,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { DemoModeBanner } from '../ui';
 import { cn } from '../../lib/utils';
 import {
   Leaf,
@@ -73,7 +72,7 @@ const publicNavItems: NavItem[] = [
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
-  const { user, logout, isDemoMode } = useAuth();
+  const { user, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -94,8 +93,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-[#faf7f2] flex flex-col">
-      {isDemoMode && <DemoModeBanner />}
-
       {/* Top Navigation */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -311,11 +308,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <Link to="/prices" className="hover:text-green-700">Price References</Link>
             </div>
           </div>
-          {isDemoMode && (
-            <p className="text-center text-xs text-amber-700 mt-3 bg-amber-50 rounded-lg py-1.5">
-              🔬 Demo Mode — All data is for demonstration only. Not real market data.
-            </p>
-          )}
         </div>
       </footer>
     </div>
